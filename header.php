@@ -26,7 +26,7 @@ barra de navegacion oscura
                             src="<?php bloginfo( 'template_url' ); ?>/images/canonical-logo-peq.png"></a>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="../wp-login.php">Ingresar</a>
+                            <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/wp-login.php">Ingresar</a>
                         </li>
                     </ul>
                 </nav>

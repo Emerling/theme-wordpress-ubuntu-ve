@@ -1,5 +1,5 @@
 
-  <div class="row font-weight-lighter">
+  <div class="row font-weight-lighter mb-5 mt-5">
 
     <nav class="nav mx-auto d-flex justify-content-center align-items-center">
       <a class="nav-link" href="#"><small>Contáctanos</small></a>

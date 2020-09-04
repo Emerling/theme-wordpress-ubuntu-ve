@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container ">
+<div class="container mb-5 mt-5 ">
 
   <!--
      entrada del blog

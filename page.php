@@ -17,27 +17,25 @@
     </div>
     </div>
 
-<button type="button" class="btn btn-outline-dark">Visite nuestro Blog</button>
-<br><br><br>
 </div>
  </div>
-    <br><br><br>
 
-    <div class="container-fluid ">
+    <div class="container mb-5 mt-5">
+    <div class='row'>
 <!--fin dal banner -->
 <section>
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
   </section>
+  </div>
 </div>
        
         <div class="container-fluid">
 
             <div class="row">
                 <div class="col border bg-light">
-                    <br><br><br>
 
-                    <div class="container">
+                    <div class="container mb-5 mt-5">
 
 
                         <div class="row justify-content-center">
@@ -147,12 +145,11 @@
                                 <a style="color:#000000" href="#"><small>tutoriales</small></a><br>
                             </div>
                         </div>
-                        <br><br>
-
+                        
                     </div>
                 </div>
             </div>
         </div>
-        <br>
+      
     </div>
     <?php get_footer(); ?>
