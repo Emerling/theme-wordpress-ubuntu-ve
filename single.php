@@ -6,14 +6,14 @@
      entrada del blog
     -->
 
-  <div class="card-deck">
+  <div class="card-deck font-weight-light">
     <div class="row">
 
       <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
           <div class="col-md-8">
             <h2><a class='font-weight-light' style="color:#000"><?php the_title(); ?></a></h2>
             <div class='text-black-50'>
-              <address>Autor: <?php the_author_posts_link() ?></address>Fecha: <?php the_time('F, j, Y'); ?>
+              <address>Autor: <?php the_author_posts_link(); ?></address>Fecha: <?php the_time('F, j, Y'); ?>
               <?php if (has_post_thumbnail()) {
                 the_post_thumbnail('post-thumbnails', array('class' => 'img-fluid mb-3'));
               }
@@ -22,13 +22,14 @@
             <div class='text-justify'>
               <?php the_content(); ?>
             </div>
-
+            
             <?php
             // si los comentarios estan abiertos cargamos ultimos comentarios.
             if (comments_open() || get_comments_number()) :
               comments_template();
             endif;
             ?>
+            
 
           </div>
           <!--            /* barra lateral derecha */ -->
@@ -62,8 +63,7 @@
   <?php get_sidebar(); ?>
 
 </div>
+<hr>
 
-<div class="container-fluid bg-ligh ">
 
   <?php get_footer(); ?>
-</div>
