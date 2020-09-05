@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container mb-5 mt-5 ">
+<div class="container mb-5 mt-5">
 
   <!--
      entrada del blog
@@ -11,17 +11,25 @@
 
       <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
           <div class="col-md-8">
-            <h3><a style="color:#000"><?php the_title(); ?></a></h3>
+            <h2><a class='font-weight-light' style="color:#000"><?php the_title(); ?></a></h2>
+            <div class='text-black-50'>
+              <address>Autor: <?php the_author_posts_link() ?></address>Fecha: <?php the_time('F, j, Y'); ?>
+              <?php if (has_post_thumbnail()) {
+                the_post_thumbnail('post-thumbnails', array('class' => 'img-fluid mb-3'));
+              }
+              ?>
+            </div>
+            <div class='text-justify'>
+              <?php the_content(); ?>
+            </div>
 
-            Autor: <?php the_author(); ?> <br> Fecha: <?php the_time('F, j, Y'); ?>
-            <?php if (has_post_thumbnail()) {
-              the_post_thumbnail('post-thumbnails', array('class' => 'img-fluid mb-3'));
-            }
+            <?php
+            // si los comentarios estan abiertos cargamos ultimos comentarios.
+            if (comments_open() || get_comments_number()) :
+              comments_template();
+            endif;
             ?>
 
-            <?php the_content(); ?>
-
-           
           </div>
           <!--            /* barra lateral derecha */ -->
 
@@ -36,8 +44,8 @@
 
 
 <!-- // paginacion -->
-<div class="card-body" style="color:#dd4814">
-<nav>
+<div class="card-body" style="color:#e95420">
+  <nav>
     <?php echo paginate_links(); ?>
   </nav>
 </div>
@@ -55,10 +63,7 @@
 
 </div>
 
-<div class="container-fluid ">
+<div class="container-fluid bg-ligh ">
 
-
-
+  <?php get_footer(); ?>
 </div>
-<br>
-<?php get_footer(); ?>

@@ -3,17 +3,14 @@
   banner ancho de encabezado
   -->
 
-<div class="jumbotron-fluid  p-4 p-md-5 text-white "
-    style="background-image: url(<?php bloginfo( 'template_url' ); ?>/images/desktop-banner2.png);min-height: 560px">
+<div class="jumbotron-fluid  p-4 p-md-5 text-white " style="background-image: url(<?php bloginfo('template_url'); ?>/images/desktop-banner2.png);min-height: 560px">
     <div class="col-md-6 px-0">
         <h1 class="font-weight-lighter">Ubuntu para equipos de escritorios</h1>
         <p class="lead my-3 font-weight-lighter">El sistema operativo de código abierto Ubuntu alimenta a millones de PC
             y portátiles en todo el mundo.
         </p>
-        <p><a href="https://ubuntu.com/desktop#download-content" class="btn btn-lg font-weight-lighter"
-                style="background-color:#0c721b; color:#fff">Descargue Ubuntu&raquo;</a></p>
-        <p class="lead mb-0"><a href="https://ubuntu.com/desktop#download-content"
-                class="text-white font-weight-lighter">Eche un vistazo ></a></p>
+        <p><a href="https://ubuntu.com/desktop#download-content" class="btn btn-lg font-weight-lighter" style="background-color:#0c721b; color:#fff">Descargue Ubuntu&raquo;</a></p>
+        <p class="lead mb-0"><a href="https://ubuntu.com/desktop#download-content" class="text-white font-weight-lighter">Eche un vistazo ></a></p>
     </div>
 </div>
 <!--fin dal banner -->
@@ -24,36 +21,35 @@
     ultimas entradas del blog
     -->
 
-    <h6 style="text-align: center; color:#0066cc">Últimas Entradas del Blog</h6>
-
-    <div class="card-deck">
+    <h5 class='font-weight-light' style="text-align: center; color:#e95420">Últimas Entradas del Blog</h5>
+    
+    <div class="card-deck font-weight-light">
         <div class="row">
 
 
 
-            <?php global 
-              $post; 
-              $last_posts = get_posts(array('posts_per_page' => 4));
+            <?php global
+                $post;
+            $last_posts = get_posts(array('posts_per_page' => 4));
 
-            foreach ( $last_posts as $post ) :
-              setup_postdata( $post );?>
+            foreach ($last_posts as $post) :
+                setup_postdata($post); ?>
 
 
-          <div class="col-lg-3">
-                <div class="card-body">
-                    <h5 class="card-title"><a style="color:#000"
-                            href="<?php the_permalink( $post ) ?>"><?php the_title(); ?></a></h5>
-                    <p class="card-text"><?php the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="card-link">Leer más...</a>
+                <div class="col-lg-3">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-light"><a style="color:#000" href="<?php the_permalink($post) ?>"><?php the_title(); ?></a></h5>
+                        <p class="card-text"><?php the_excerpt(); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="card-link">Leer más...</a>
+                    </div>
+                    <div class="card-footer">
+                        Autor: <?php the_author(); ?> <br> Fecha: <?php the_time('F, j, Y'); ?>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    Autor: <?php the_author(); ?> <br> Fecha: <?php the_time('F, j, Y'); ?>
-                </div>
-            </div>
 
             <?php endforeach;
- wp_reset_postdata();
-?>
+            wp_reset_postdata();
+            ?>
 
 
             <!--
@@ -73,7 +69,7 @@ paginacion
 
         <div class="row">
             <div class="col-lg-6">
-                <img src="<?php bloginfo( 'template_url' ); ?>/images/openstack-hero.jpg" class="img-fluid">
+                <img src="<?php bloginfo('template_url'); ?>/images/openstack-hero.jpg" class="img-fluid">
                 <br><br>
             </div>
             <div class="col-lg-6">
@@ -87,42 +83,42 @@ paginacion
             </div>
         </div>
     </div>
-   
+
 
     <div class="container-fluid">
 
         <div class="row">
             <div class="col border bg-light">
-                   <div class="container mb-5 mt-5">
+                <div class="container mb-5 mt-5">
 
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h2 class="font-weight-lighter" style="text-align: left"> <a href="#">La forma más
-                                        rápida de pasar del desarrollo a la producción en IoT ›</a></h2>
-                                <br><br>
-                                <h5 class="font-weight-light">
-                                    <p>Obtenga información sobre cómo Ubuntu Core y los Snaps pueden ayudarlo a
-                                        construir y conectar dispositivos.</p>
-                                </h5>
-                                
-                            </div>
-                            <div class="col-lg-6">
-                                <img src="<?php bloginfo( 'template_url' ); ?>/images/dron-iot.jpg" class="img-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2 class="font-weight-lighter" style="text-align: left"> <a href="#">La forma más
+                                    rápida de pasar del desarrollo a la producción en IoT ›</a></h2>
+                            <br><br>
+                            <h5 class="font-weight-light">
+                                <p>Obtenga información sobre cómo Ubuntu Core y los Snaps pueden ayudarlo a
+                                    construir y conectar dispositivos.</p>
+                            </h5>
 
-                              
-                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="<?php bloginfo('template_url'); ?>/images/dron-iot.jpg" class="img-fluid">
+
+
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
 
-   
+
     <div class="container mb-5 mt-5">
 
         <div class="row">
             <div class="col-lg-6">
-                <img src="<?php bloginfo( 'template_url' ); ?>/images/contenedor.jpg" class="img-fluid">
+                <img src="<?php bloginfo('template_url'); ?>/images/contenedor.jpg" class="img-fluid">
                 <br><br>
             </div>
             <div class="col-lg-6">
@@ -135,13 +131,13 @@ paginacion
             </div>
         </div>
     </div>
-   
+
 
     <div class="container-fluid">
 
         <div class="row">
             <div class="col border bg-light">
-               
+
 
                 <div class="container mb-5 mt-5">
 
@@ -156,28 +152,27 @@ paginacion
                             <br><br>
                         </div>
                         <div class="col-lg-6">
-                            <img src="<?php bloginfo( 'template_url' ); ?>/images/laptop.jpg" class="img-fluid">
-                           
+                            <img src="<?php bloginfo('template_url'); ?>/images/laptop.jpg" class="img-fluid">
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-   
+
     <div class="container mb-5 mt-5">
 
         <div class="row">
 
-            <div class="col-lg-2 d-flex align-items-center" style="background-color:#3b69e2">
-                <img src="<?php bloginfo( 'template_url' ); ?>/images/k8s.png" class="d-none d-sm-none d-md-block">
+            <div class="col-lg-2  d-flex align-items-center" style="background-color:#3b69e2">
+                <img src="<?php bloginfo('template_url'); ?>/images/k8s.png" class="d-none d-sm-none d-md-block">
 
             </div>
 
-            <div class="col-lg-3 border-right border-white  "
-                style="border-width: 15px !important; background-color:#3b69e2; color:#fff">
+            <div class="col-lg-3 md-1 " style="background-color:#3b69e2; color:#fff">
                 <br><br>
-                <h2 class="font-weight-lighter " style="text-align: left"> <a href="#">
+                <h2 class=" font-weight-lighter " style="text-align: left"> <a href="#">
                         <a style="color:#ffffff" href="#">Vea nuestros seminarios web de Kubernetes ›</a>
                     </a>
                 </h2>
@@ -187,7 +182,7 @@ paginacion
                     </p>
                 </h5>
             </div>
-            <div class="col-lg-3" style="background-color:#da2643; color:#fff">
+            <div class="col-lg-3 ml-1" style="background-color:#da2643; color:#fff">
                 <br><br>
                 <h2 class="font-weight-lighter" style="text-align: left"> <a href="#">
                         <a style="color:#ffffff" href="#">¿Aumentan los costos de OpenStack? ›</a>
@@ -199,8 +194,7 @@ paginacion
                 </h5>
             </div>
             <div class="col-lg-2 d-flex align-items-center" style="background-color:#da2643">
-                <img src="<?php bloginfo( 'template_url' ); ?>/images/openstacklogo.png"
-                    class="d-none d-sm-none d-md-block">
+                <img src="<?php bloginfo('template_url'); ?>/images/openstacklogo.png" class="d-none d-sm-none d-md-block">
             </div>
         </div>
     </div>
@@ -319,7 +313,7 @@ paginacion
                             <a style="color:#000000" href="#"><small>tutoriales</small></a><br>
                         </div>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
     </div>

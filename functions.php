@@ -16,12 +16,20 @@ function ubuntu_agregar_css_js(){
 
 
 }
-add_action( 'wp_enqueue_scripts', 'ubuntu_agregar_css_js' );
-// activar imagenes destacadas
-if ( function_exists( 'add_theme_support' ) ) {
-    add_theme_support( 'post-thumbnails' );
+function ubuntu_setup(){
+  // activar imagenes destacadas
+  if ( function_exists( 'add_theme_support' ) ) {
+  add_theme_support( 'post-thumbnails' );
+  }
+  add_theme_support('title_tag');
+}
 
- }
+add_action('afert_setup_theme','ubuntu_setup');
+
+
+
+add_action( 'wp_enqueue_scripts', 'ubuntu_agregar_css_js' );
+
 
 // agregar sidebar</h3>
 function ubuntu_widgets(){

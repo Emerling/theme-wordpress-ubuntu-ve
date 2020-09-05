@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+
+    
+
 <!--
   banner ancho de encabezado
   -->
@@ -23,7 +26,7 @@
     <div class="container mb-5 mt-5">
     <div class='row'>
 <!--fin dal banner -->
-<section>
+<section class='text-justify font-weight-light'>
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
   </section>

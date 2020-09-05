@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes(); ?>>
 
 <head>
-    <title>Ubuntu Venezuela-Comunidad Oficial</title>
+ 
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--  Bootstrap CSS -->
@@ -22,8 +22,7 @@ barra de navegacion oscura
             style="background-color: #262626;color:#fff; height: 35px ">
             <div class="container nav-fill w-100">
                 <nav class="navbar navbar-expand-lg navClass" style="top:-15px">
-                    <a class="navbar-left" href="https://canonical.com/"><img
-                            src="<?php bloginfo( 'template_url' ); ?>/images/canonical-logo-peq.png"></a>
+                    <a class="navbar-left" href="https://canonical.com/"><img src="<?php bloginfo( 'template_url' ); ?>/images/canonical-logo-peq.png"></a>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/wp-login.php">Ingresar</a>
@@ -39,7 +38,7 @@ barra de navegacion oscura
 
         <nav class="navbar navbar-expand-lg navbar-dark font-weight-light" style="background-color: #333">
             <div class="container">
-                <a class="navbar-left" style="margin-top: -8px; height:52px" href="https://ubuntu-ve.org/"><img
+                <a class="navbar-left" style="margin-top: -8px; height:52px" href="<?php bloginfo( 'url' ); ?>"><img
                         src="<?php bloginfo( 'template_url' ); ?>/images/logo-ubuntu-ve.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -63,13 +62,13 @@ wp_nav_menu( array(
 
               ?>
 
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Buscar</button>
-                </form>
+        
+                <?php get_search_form(); ?>
+               
             </div>
 
         </nav>
         </div>
     </header>
+    <body <?php body_class(); ?>>
     
