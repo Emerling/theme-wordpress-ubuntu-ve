@@ -56,7 +56,7 @@ endif;
                     <a class='font-weight-bold' href="mailto:<?php the_author_email(); ?>">Click para enviar un correo</a>
 
 
-                    <div class="card-footer h-100  d-flex justify-content-center align-items-center" style='background-color:#333'>
+                    <div class="card-footer h-100  d-flex justify-content-center align-items-center" style='background-color:#111'>
                         <a class="launchpad" href="<?php echo $curauth->launchpad; ?>"><img
                                 src="<?php bloginfo('template_url'); ?>/images/launchpad.png" HSPACE="5"class="img-fluid">  </a>
                         <a class="wiki" href="<?php echo $curauth->wiki; ?>"><img
