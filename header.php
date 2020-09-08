@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 
 <head>
- 
+
     <!-- Required meta tags -->
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,8 @@ barra de navegacion oscura
             style="background-color: #262626;color:#fff; height: 35px ">
             <div class="container nav-fill w-100">
                 <nav class="navbar navbar-expand-lg navClass" style="top:-15px">
-                    <a class="navbar-left" href="https://canonical.com/"><img src="<?php bloginfo( 'template_url' ); ?>/images/canonical-logo-peq.png"></a>
+                    <a class="navbar-left" href="https://canonical.com/"><img
+                            src="<?php bloginfo( 'template_url' ); ?>/images/canonical-logo-peq.png"></a>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="<?php bloginfo( 'url' ); ?>/wp-login.php">Ingresar</a>
@@ -49,26 +50,24 @@ barra de navegacion oscura
 
 
                 <?php
-wp_nav_menu( array(
-    'theme_location'  => 'primary',
-    'depth'           => 2, // 1 = sin dropdowns, 2 = con dropdowns.
-    'container'       => 'div',
-    'container_class' => 'collapse navbar-collapse',
-    'container_id'    => 'navbarSupportedContent',
-    'menu_class'      => 'navbar-nav mx-auto',
-    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-    'walker'          => new WP_Bootstrap_Navwalker(),
-) );
+                wp_nav_menu( array(
+                    'theme_location'  => 'primary',
+                    'depth'           => 2, // 1 = sin dropdowns, 2 = con dropdowns.
+                    'container'       => 'div',
+                    'container_class' => 'collapse navbar-collapse',
+                    'container_id'    => 'navbarSupportedContent',
+                    'menu_class'      => 'navbar-nav mx-auto',
+                    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'          => new WP_Bootstrap_Navwalker(),
+                ) );
 
               ?>
-
-        
                 <?php get_search_form(); ?>
-               
+
             </div>
 
         </nav>
-        </div>
+        
     </header>
-    <body <?php body_class(); ?>>
-    
+    <body>
+        

@@ -27,7 +27,7 @@
     <div class='row'>
 <!--fin dal banner -->
 <section class='text-justify font-weight-light'>
-    <h1><?php the_title(); ?></h1>
+    <h1 class='font-weight-light'><?php the_title(); ?></h1>
     <?php the_content(); ?>
   </section>
   </div>
