@@ -61,6 +61,25 @@ register_nav_menus( array(
 add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
 
+if ( function_exists( 'add_theme_support' ) ) {
+  add_theme_support( 'post-thumbnails' );
+  set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
+
+  // additional image sizes
+  // delete the next line if you do not need additional image sizes
+  add_image_size( 'category-thumb', 300, 9999 ); // 300 pixels wide (and unlimited height)
+}
+
+
+
+
+
+
+
+
+
+
+
 function my_show_extra_profile_fields( $user ) { ?>
 
 <h3>Información Extra del perfil</h3>

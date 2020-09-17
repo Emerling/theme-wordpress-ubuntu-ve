@@ -150,7 +150,7 @@ paginacion
                                 <p>Descargue la última versión de Ubuntu, para PC de escritorio y portátiles.</p>
                             </h5>
                             <br><br>
-                        </div>
+                         </div>
                         <div class="col-lg-6">
                             <img src="<?php bloginfo('template_url'); ?>/images/laptop.jpg" class="img-fluid">
 

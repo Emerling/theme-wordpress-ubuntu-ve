@@ -18,7 +18,7 @@
 
                         </header>
                         <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium', array('class' => 'img-fluid mb-3'));
+                                    the_post_thumbnail('medium', array('class' => 'img-fluid'));
                                 } ?>
 
                         <?php the_excerpt(); ?>
