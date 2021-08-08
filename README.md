@@ -5,5 +5,5 @@ buscamos mantener el estilo de Ubuntu. y mezclar la pagina estatica y el blog
 
 para su instalación debe colocar el contenido en una carpeta ubicada en
 .../tuweb/content/themes/ubuntu-ve
-y posteriormente activarla en el panelde wordpress
+y posteriormente activarla en el panel de wordpress
 
